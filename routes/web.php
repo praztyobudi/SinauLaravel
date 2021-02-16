@@ -20,3 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PegawaiController@index');
 Route::get('/tambah', 'PegawaiController@tambah');
 Route::post('/store', 'PegawaiController@store');
+Route::get('/edit/{id}', 'PegawaiController@edit');
+Route::put('/update/{id}', 'PegawaiController@update');
+Route::get('/hapus/{id}', 'PegawaiController@delete');

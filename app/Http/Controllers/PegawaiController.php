@@ -18,16 +18,42 @@ class PegawaiController extends Controller
     }
     public function store(Request $request)
     {
-    	$this->validate($request,[
-    		'nama' => 'required|min:5|max:6',
-    		'alamat' => 'required'
-    	]);
+        $this->validate($request, [
+            'nama' => 'required|min:5|max:6',
+            'alamat' => 'required'
+        ]);
 
         PegawaiModel::create([
-    		'nama' => $request->nama,
-    		'alamat' => $request->alamat
-    	]);
+            'nama' => $request->nama,
+            'alamat' => $request->alamat
+        ]);
 
-    	return redirect('/');
+        return redirect('/');
+    }
+
+    public function edit($id)
+    {
+        $peg = PegawaiModel::find($id);
+        return view('vpegawai_edit', ['editpegawai' => $peg]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        $peg = PegawaiModel::find($id);
+        $peg->nama = $request->nama;
+        $peg->alamat = $request->alamat;
+        $peg->save();
+        return redirect('/');
+    }
+    public function delete($id)
+    {
+        $peg = PegawaiModel::find($id);
+        $peg->delete();
+        return redirect('/');
     }
 }
