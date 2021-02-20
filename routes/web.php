@@ -19,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [HomeController::class,'home']);
+
+Route::get('/formulir', [HomeController::class,'formulir']);
+Route::get('/setting', [HomeController::class,'setting']);

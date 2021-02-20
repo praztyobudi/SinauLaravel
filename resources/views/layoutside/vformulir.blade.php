@@ -1,10 +1,9 @@
 @extends('layout.vtemplate')
 
-@section('content')
-<p>ini kontent isi</p>
+@section('formulir')
+ini Formulir
 @endsection
 
 @section('starter page')
-<p>Starter Page Dashboard</p>
+<p>Starter Page formulir</p>
 @endsection
-

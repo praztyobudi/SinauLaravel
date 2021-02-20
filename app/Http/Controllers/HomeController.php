@@ -10,4 +10,12 @@ class HomeController extends Controller
     {
         return view('vhome');
     }
+    public function formulir()
+    {
+        return view('layoutside/vformulir');
+    }
+    public function setting()
+    {
+        return view('layoutside/vsetting');
+    }
 }
