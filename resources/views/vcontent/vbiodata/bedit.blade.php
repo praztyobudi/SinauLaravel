@@ -2,7 +2,7 @@
 
 
 @section('starter page')
-<p>Starter Page formulir</p>
+<p>Silahkah perbarai data anda</p>
 @endsection
 
 @section('bcreate')
@@ -13,7 +13,7 @@
             <br />
             <br />
 
-            <form method="post" action="/biodata/update/{{$bio_edit->id}}">
+            <form method="post" action="{{url('/biodata/update',$bio_edit->id)}}">
 
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}

@@ -2,7 +2,7 @@
 
 
 @section('starter page')
-<p>Starter Page formulir</p>
+<p>Silahkah isi data diri anda</p>
 @endsection
 
 @section('bcreate')
@@ -13,13 +13,13 @@
             <br />
             <br />
 
-            <form method="post" action="/biodata/store">
+            <form method="post" action="{{url('/biodata/store')}}">
 
                 {{ csrf_field() }}
 
                 <div class="form-group">
                     <label>Nama</label>
-                    <input type="text" name="nama" class="form-control" placeholder="Nama pegawai ..">
+                    <input type="text" name="nama" class="form-control" placeholder="Nama">
 
                     @if($errors->has('nama'))
                     <div class="text-danger">

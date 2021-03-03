@@ -14,8 +14,8 @@ class BiodataController extends Controller
      */
     public function index()
     {
-        $bio = BiodataModel::all();
-        return view('vcontent.vbiodata.index', ['biodata'=>$bio]);
+        $biodata = BiodataModel::all();
+        return view('vcontent.vbiodata.index', compact('biodata'));
     }
 
     /**
@@ -52,7 +52,7 @@ class BiodataController extends Controller
             'telp' => $request->telp,
             ]);
 
-            return back();
+            return redirect('/biodata');
 
     }
 
@@ -107,7 +107,7 @@ class BiodataController extends Controller
             $bio_update -> save();
 
 
-            return back();
+            return redirect('/biodata');
     }
 
     /**
