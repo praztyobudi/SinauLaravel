@@ -31,8 +31,8 @@
                         <td>{{ $b->jenkel }}</td>
                         <td>{{ $b->telp }}</td>
                         <td>
-                            <a href="#" class="btn btn-warning">Edit</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
+                            <a href="/biodata/edit/{{$b->id}}" class="btn btn-warning">Edit</a>
+                            <a href="/biodata/hapus/{{$b->id}}" class="btn btn-danger">Hapus</a>
                         </td>
                     </tr>
                     @endforeach

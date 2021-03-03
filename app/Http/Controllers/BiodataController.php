@@ -75,7 +75,9 @@ class BiodataController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bio_edit=BiodataModel::find($id);
+        return view('vcontent.vbiodata.bedit', ['bio_edit'=>$bio_edit]);
+
     }
 
     /**
@@ -87,7 +89,25 @@ class BiodataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'nama' => 'required',
+            'ttl' => 'required',
+            'alamat' => 'required',
+            'jenkel' => 'required',
+            'telp' => 'required',
+            ]);
+
+               $bio_update=BiodataModel::find($id);
+
+            $bio_update -> nama = $request->nama;
+            $bio_update -> ttl = $request->ttl;
+            $bio_update -> alamat = $request->alamat;
+            $bio_update -> jenkel = $request->jenkel;
+            $bio_update -> telp = $request->telp;
+            $bio_update -> save();
+
+
+            return back();
     }
 
     /**
@@ -98,6 +118,8 @@ class BiodataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bio_del=BiodataModel::find($id);
+        $bio_del -> delete();
+        return back();
     }
 }

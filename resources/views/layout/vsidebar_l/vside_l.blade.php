@@ -12,26 +12,20 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                <li class="nav-item">
+                <li class="nav-item ">
                     <a href="/" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/formulir" class="nav-link">
-                        <i class="nav-icon fas fa-poll-h"></i>
-                        <p>Formulir</p>
-                    </a>
-                </li>
-                <li class="nav-item {{ Request::is('/biodata*') ? 'class=active' : '' }}">
-                    <a href="/biodata" class="nav-link">
+                <li class="nav-item ">
+                    <a href="{{ url('biodata') }}" class="nav-link {{  Request::is('biodata*') ? 'bg-primary' : '' }}">
                         <i class="nav-icon fas fa-poll-h"></i>
                         <p>Biodata</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class="nav-link ">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             User
@@ -40,7 +34,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="#" class="nav-link {{  Request::is('#*') ? 'bg-primary' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Active Page</p>
                             </a>
@@ -54,7 +48,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="/setting" class="nav-link">
+                    <a href="/setting" class="nav-link {{  Request::is('setting*') ? 'bg-primary' : '' }}">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
                             Setting

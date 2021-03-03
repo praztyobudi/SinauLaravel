@@ -19,9 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/setting', [HomeController::class,'setting']);
+
 Route::get('/biodata', [BiodataController::class,'index']);
 Route::get('/biodata/create', [BiodataController::class,'create']);
 Route::post('/biodata/store', [BiodataController::class,'store']);
+Route::get('/biodata/edit/{id}', [BiodataController::class,'edit']);
+Route::put('/biodata/update/{id}', [BiodataController::class,'update']);
+Route::get('/biodata/hapus/{id}', [BiodataController::class,'destroy']);
 // Route::resource('/biodata', BiodataController::class);
 
