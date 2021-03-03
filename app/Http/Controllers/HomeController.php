@@ -6,16 +6,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function home()
-    {
-        return view('vhome');
-    }
     public function formulir()
     {
-        return view('layoutside/vformulir');
+        return view('vcontent.vbiodata.vformulir');
     }
     public function setting()
     {
-        return view('layoutside/vsetting');
+        return view('vcontent.vbiodata.vsetting');
     }
 }

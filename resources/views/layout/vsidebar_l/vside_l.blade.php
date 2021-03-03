@@ -13,19 +13,24 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="/" class="nav-link active">
+                    <a href="/" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
-                {{-- @yield('sidebar_L') --}}
                 <li class="nav-item">
                     <a href="/formulir" class="nav-link">
                         <i class="nav-icon fas fa-poll-h"></i>
                         <p>Formulir</p>
                     </a>
                 </li>
-                <li class="nav-item menu-open">
+                <li class="nav-item {{ Request::is('/biodata*') ? 'class=active' : '' }}">
+                    <a href="/biodata" class="nav-link">
+                        <i class="nav-icon fas fa-poll-h"></i>
+                        <p>Biodata</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
@@ -35,7 +40,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Active Page</p>
                             </a>
@@ -53,7 +58,6 @@
                         <i class="nav-icon fas fa-cog"></i>
                         <p>
                             Setting
-                            <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
                 </li>

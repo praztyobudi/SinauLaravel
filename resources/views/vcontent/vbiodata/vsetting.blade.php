@@ -1,4 +1,4 @@
-@extends('layout.vtemplate')
+@extends('vcontent.vmaincontent')
 
 @section('setting')
 ini setting

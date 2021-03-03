@@ -16,10 +16,7 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
     <!-- Main content Here -->
-    @yield('content')
-    @yield('formulir')
-    @yield('setting')
+    @yield('maincontent')
     <!-- /.content -->
   </div>

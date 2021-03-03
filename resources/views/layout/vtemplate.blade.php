@@ -27,7 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   @include('layout.vsidebar_l.vside_l')
 
   <!-- Content Wrapper. Contains page content -->
-  @include('layout.vcontent.vcontent')
+  @include('layout.vheader.vheader')
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
